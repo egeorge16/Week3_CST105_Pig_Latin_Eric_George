@@ -2,7 +2,13 @@ package piglatin;
 //Import scanner and io to scan in file name as source
 import java.util.Scanner;
 import java.io.*;
-
+/**Program: PigLatin
+ * File: PigLatin.java
+ * Summary: Takes specified text file and 
+ * converts the english text into pig latin.
+ * Author: Eric George
+ * Date: November 25, 2018
+ */
 public class PigLatin {
     //Establish string to throw FileNotFoundException
     public static void main(String[] args) throws FileNotFoundException {
@@ -29,7 +35,7 @@ public class PigLatin {
            //If word starts with a vowel, add way to the end
             pigWord = s + "way";
             //If word starts with th or Th return word in new order and add ay to end
-        } else if (s.startsWith("th") || s.startsWith("Th")) {     
+        } else if (s.startsWith("th") || s.startsWith("Th")|| s.startsWith("St")|| s.startsWith("st")) {     
             pigWord = s.substring(2) + s.substring(0,2) + "ay";
         } else {
             pigWord = s.substring(1,s.length()) + s.charAt(0) + "ay";
